@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Manipulation</title>
+  </head>
+  <body>
+    <p id="teks">Hallo Semuanya</p>
+
+    <button onclick="ubahTeks()">Ubah Nama</button>
+    <button onclick="ubahWarna()">Ubah Warna</button>
+    <button onclick="sembunyikan()">Sembunyikan</button>
+    <button onclick="tampilkan()">Tampilkan</button>
+
+    <script>
+      function ubahTeks() {
+        document.getElementById("teks").innerHTML = "rizka amelia";
+      }
+
+      function ubahWarna() {
+        document.getElementById("teks").style.color = "red";
+        document.getElementById("teks").style.color = "blue";
+      }
+
+      function sembunyikan() {
+        document.getElementById("teks").style.display = "none";
+      }
+
+      function tampilkan() {
+        document.getElementById("teks").style.display = "block";
+      }
+    </script>
+  </body>
+</html>

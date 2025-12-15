@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Block dan Inline Elements</title>
+   <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fafafa;
+            color: #333;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #0077b6;
+            border-bottom: 2px solid #caf0f8;
+            display: inline-block;
+            padding-bottom: 4px;
+        }
+
+        .highlight {
+            color: #e63946;
+            font-weight: bold;
+        }
+
+        a {
+            color: #1d3557;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #457b9d;
+        }
+    </style>
+    </head>
+
+<body>
+    <h2>Block Elements</h2>
+    <p>Ini adalah elemen paragraf yang merupakan block element.</p>
+    <div style="background:#e0f7fa; padding:10px; border-radius:8px;">Ini juga block element.</div>
+
+    <h2>Inline Elements</h2>
+    <p>
+        Teks ini mengandung <span class="highlight">elemen inline</span>,
+        seperti <a href="#">tautan</a>, <strong>teks tebal</strong>, dan <em>teks miring</em>.
+    </p>
+  
+</body>
+
+</html>
