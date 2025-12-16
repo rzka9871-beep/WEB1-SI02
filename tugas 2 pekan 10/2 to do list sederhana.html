@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do List Interaktif</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #83eaa2, #0bcf63);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background: white;
+            width: 320px;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+
+        button {
+            width: 48%;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .add {
+            background: linear-gradient(90deg, #d4f474, #85f01a);
+        }
+
+        .delete {
+            background: linear-gradient(90deg, #e0b48a, #eec042);
+        }
+
+        ul {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>To-Do List</h2>
+
+    <input type="text" id="inputTodo" placeholder="Tulis kegiatan...">
+
+    <div style="display:flex; justify-content:space-between;">
+        <button class="add" onclick="tambahTodo()">Tambah</button>
+        <button class="delete" onclick="hapusTerakhir()">Hapus</button>
+    </div>
+
+    <ul id="listTodo"></ul>
+</div>
+
+<script>
+    function tambahTodo() {
+        const input = document.getElementById("inputTodo");
+        const list = document.getElementById("listTodo");
+
+        if (input.value === "") {
+            alert("Input tidak boleh kosong!");
+            return;
+        }
+
+        const li = document.createElement("li");   
+        li.textContent = input.value;
+
+        list.appendChild(li);                     
+        input.value = "";
+    }
+
+    function hapusTerakhir() {
+        const list = document.getElementById("listTodo");
+
+        if (list.children.length === 0) {
+            alert("Tidak ada item untuk dihapus!");
+            return;
+        }
+
+        list.removeChild(list.lastElementChild);  
+    }
+</script>
+
+</body>
+</html>
+

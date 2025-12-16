@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Method Chaining</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        #show {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(90deg, #00c6ff, #0072ff);
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #notif {
+            display: none;
+            margin-top: 20px;
+            width: 320px;
+            padding: 18px;
+            border-radius: 12px;
+            color: white;
+            font-weight: bold;
+            background: linear-gradient(135deg, #ff512f, #dd2476);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <button id="show">Tampilkan Notifikasi</button>
+
+        <div id="notif">
+            Notifikasi ditampilkan
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#show").click(function () {
+                $("#notif")
+                    .css({
+                        "background": "linear-gradient(135deg, #00c6ff, #0072ff)"
+                    })                 
+                    .fadeIn(500)        
+                    .slideDown(500)    
+                    .delay(3000)       
+                    .slideUp(500)      
+                    .fadeOut(500);     
+            });
+        });
+    </script>
+
+</body>
+</html>
+
